@@ -1,0 +1,39 @@
+.account-menu__signin {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.account-menu__signin:hover {
+  color: var(--text);
+  border-color: var(--border-focus);
+}
+
+.account-menu__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.account-menu__avatar:hover {
+  border-color: var(--border-focus);
+  background: var(--bg-surface-hover);
+}

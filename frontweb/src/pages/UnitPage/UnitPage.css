@@ -1,0 +1,80 @@
+.unit-page {
+  flex: 1;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.unit-page__inner {
+  max-width: 520px;
+  animation: page-enter 0.6s var(--ease-out) both;
+}
+
+.unit-page__header {
+  margin-bottom: 2rem;
+}
+
+.unit-page__back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.unit-page__back:hover {
+  color: var(--text);
+}
+
+.unit-page__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.unit-page__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.unit-page__meta:empty {
+  display: none;
+}
+
+.unit-page__lessons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.unit-page__start {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.unit-page__start:hover {
+  color: var(--text);
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

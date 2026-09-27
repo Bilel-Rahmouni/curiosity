@@ -1,0 +1,56 @@
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.leaderboard__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.leaderboard__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leaderboard__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: var(--radius-sm);
+}
+
+.leaderboard__row--me {
+  background: var(--bg-deep);
+  outline: 1px solid var(--border-focus);
+}
+
+.leaderboard__rank {
+  width: 1.4rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-dim);
+}
+
+.leaderboard__name {
+  flex: 1;
+  color: var(--text);
+}
+
+.leaderboard__xp {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}

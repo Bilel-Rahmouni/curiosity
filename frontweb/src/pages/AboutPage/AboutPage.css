@@ -1,0 +1,6 @@
+.about-page__body {
+  min-height: 32vh;
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}

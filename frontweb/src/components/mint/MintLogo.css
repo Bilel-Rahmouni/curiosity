@@ -1,0 +1,12 @@
+.mint-logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-muted);
+}
+
+.mint-logo__dot {
+  color: var(--accent);
+}

@@ -1,0 +1,55 @@
+.mastery-heatmap {
+  overflow-x: auto;
+}
+
+.mastery-heatmap__table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.mastery-heatmap__unit {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.mastery-heatmap__student {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.mastery-heatmap__cell {
+  padding: 0.35rem 0.75rem;
+  text-align: center;
+}
+
+.mastery-heatmap__dot {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.mastery-heatmap__dot--familiar {
+  background: color-mix(in srgb, var(--info) 35%, transparent);
+  border-color: color-mix(in srgb, var(--info) 50%, transparent);
+}
+
+.mastery-heatmap__dot--proficient {
+  background: color-mix(in srgb, var(--warning) 40%, transparent);
+  border-color: color-mix(in srgb, var(--warning) 55%, transparent);
+}
+
+.mastery-heatmap__dot--mastered {
+  background: color-mix(in srgb, var(--success) 45%, transparent);
+  border-color: color-mix(in srgb, var(--success) 60%, transparent);
+}

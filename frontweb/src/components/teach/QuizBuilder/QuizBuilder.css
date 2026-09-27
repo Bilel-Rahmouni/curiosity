@@ -1,0 +1,131 @@
+.quiz-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quiz-builder__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.quiz-builder select,
+.quiz-builder input:not([type='radio']) {
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.quiz-builder select:focus,
+.quiz-builder input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.quiz-builder__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quiz-builder__field span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.quiz-builder__field input[type='number'] {
+  width: 5.5rem;
+}
+
+.quiz-builder button {
+  padding: 0.55rem 1.1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bg-deep);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.quiz-builder button:hover {
+  opacity: 0.85;
+}
+
+.quiz-builder button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.quiz-builder__questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.quiz-builder__questions li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.quiz-builder__questions button {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+}
+
+.quiz-builder__q-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-builder__custom summary {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.quiz-builder__custom-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.quiz-builder__choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.quiz-builder__choice input[type='radio'] {
+  margin-top: 1.6rem;
+  accent-color: var(--accent);
+}
+
+.quiz-builder__choice > :last-child {
+  flex: 1;
+}
+
+.quiz-builder__create {
+  align-self: flex-start;
+}

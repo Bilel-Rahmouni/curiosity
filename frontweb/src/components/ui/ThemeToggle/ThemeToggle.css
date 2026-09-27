@@ -1,0 +1,25 @@
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  background: var(--bg-surface);
+}
+
+.theme-toggle__icon {
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,35 @@
+.certificate-button {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.certificate-button button {
+  padding: 0.55rem 1.3rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--bg-deep);
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.certificate-button button:hover {
+  transform: translateY(-1px);
+}
+
+.certificate-button button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  transform: none;
+}
+
+.certificate-button__error {
+  font-size: 0.8125rem;
+  color: var(--danger);
+}

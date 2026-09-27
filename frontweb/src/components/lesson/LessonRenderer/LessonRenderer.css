@@ -1,0 +1,321 @@
+.lesson-renderer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lesson-renderer__paragraph {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.lesson-renderer__list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.lesson-renderer__example {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--tint-raise);
+}
+
+.lesson-renderer__example-q {
+  margin: 0 0 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.lesson-renderer__example-a {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.lesson-renderer__diagram {
+  padding: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--tint-raise);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.lesson-renderer__empty {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.lesson-diagram {
+  width: 100%;
+  max-width: 320px;
+}
+
+.lesson-diagram__dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.lesson-diagram__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.lesson-diagram__shapes {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.lesson-diagram__shape {
+  border: 1.5px solid var(--text-muted);
+}
+
+.lesson-diagram__shape--circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.lesson-diagram__shape--square {
+  width: 40px;
+  height: 40px;
+}
+
+.lesson-diagram__shape--triangle {
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 40px solid var(--text-muted);
+  border-top: none;
+  background: transparent;
+}
+
+.lesson-diagram__line {
+  width: 100%;
+  height: 2px;
+  background: var(--border-focus);
+  position: relative;
+}
+
+.lesson-diagram__mark {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text);
+  transform: translate(-50%, -50%);
+}
+
+.lesson-diagram__compare {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.lesson-diagram__ratio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.lesson-diagram__ratio-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.lesson-diagram__ratio-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lesson-diagram__ratio-fill {
+  height: 100%;
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+.lesson-diagram__atom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lesson-diagram__nucleus {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-muted);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.lesson-diagram__orbit {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px dashed var(--border-subtle);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.lesson-diagram__electron {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text);
+}
+
+.lesson-diagram__electron--1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lesson-diagram__force {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  color: var(--text-muted);
+}
+
+.lesson-diagram__box {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--text-muted);
+  border-radius: var(--radius-sm);
+}
+
+.lesson-diagram__states {
+  display: flex;
+  gap: 1rem;
+}
+
+.lesson-diagram__state {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+.lesson-diagram__state--active {
+  color: var(--text);
+  border-color: var(--border-focus);
+}
+
+.lesson-diagram__ph {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #ef4444 0%,
+    #eab308 50%,
+    #22c55e 100%
+  );
+  position: relative;
+}
+
+.lesson-diagram__ph-mark {
+  position: absolute;
+  top: -6px;
+  width: 2px;
+  height: 22px;
+  background: var(--text);
+  transform: translateX(-50%);
+}
+
+.lesson-diagram__circuit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lesson-diagram__wire {
+  width: 40px;
+  height: 2px;
+  background: var(--text-dim);
+}
+
+.lesson-diagram__wire--off {
+  opacity: 0.3;
+}
+
+.lesson-diagram__bulb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-muted);
+}
+
+.lesson-diagram__bulb--on {
+  background: rgba(234, 179, 8, 0.35);
+  border-color: #eab308;
+}
+
+.lesson-renderer__code {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
+  font-size: 0.8425rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-mid);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  text-align: left;
+}
+
+.lesson-renderer__media-wrap {
+  margin: 1.25rem 0;
+}
+
+.lesson-renderer__media {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.lesson-renderer__caption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}

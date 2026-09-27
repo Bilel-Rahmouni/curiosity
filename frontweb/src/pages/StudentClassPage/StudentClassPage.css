@@ -1,0 +1,20 @@
+.student-class__board {
+  align-self: flex-start;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.student-class__board:hover {
+  color: var(--text);
+  border-color: var(--border-focus);
+}

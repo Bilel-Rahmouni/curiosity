@@ -1,0 +1,84 @@
+.board-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.board-page__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.board-page__swatch {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.board-page__swatch:hover {
+  transform: scale(1.15);
+}
+
+.board-page__swatch--active {
+  border-color: var(--accent);
+}
+
+.board-page__toolbar input[type='range'] {
+  width: 90px;
+  accent-color: var(--accent);
+}
+
+.board-page__tool {
+  padding: 0.3rem 0.8rem;
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.board-page__tool:hover {
+  color: var(--text);
+  border-color: var(--border-focus);
+}
+
+.board-page__tool--active {
+  color: var(--bg-deep);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.board-page__canvas {
+  width: 100%;
+  height: auto;
+  touch-action: none;
+  /* Fixed: the canvas bitmap is shared across users and always dark. */
+  background: #101014;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: crosshair;
+}
+
+.board-page__denied {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--text-muted);
+}

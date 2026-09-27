@@ -1,0 +1,62 @@
+.plan-builder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.plan-builder select,
+.plan-builder input {
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.plan-builder select:focus,
+.plan-builder input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.plan-builder__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.plan-builder__field span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.plan-builder__field input[type='number'] {
+  width: 5.5rem;
+}
+
+.plan-builder button {
+  padding: 0.55rem 1.1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bg-deep);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.plan-builder button:hover {
+  opacity: 0.85;
+}
+
+.plan-builder button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

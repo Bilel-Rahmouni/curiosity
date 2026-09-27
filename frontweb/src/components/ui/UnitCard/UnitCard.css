@@ -1,0 +1,42 @@
+.unit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+  animation: card-enter 0.7s var(--ease-out) both;
+}
+
+.unit-card:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--border-focus);
+}
+
+.unit-card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.unit-card__meta {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

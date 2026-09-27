@@ -1,0 +1,92 @@
+.teacher-approvals {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.teacher-approvals__title {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.teacher-approvals__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.teacher-approvals__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.teacher-approvals__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.teacher-approvals__name {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.teacher-approvals__subjects {
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.teacher-approvals__bio {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacher-approvals__approve,
+.teacher-approvals__revoke {
+  flex-shrink: 0;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.teacher-approvals__approve {
+  color: var(--bg-deep);
+  background: var(--text);
+  border: none;
+}
+
+.teacher-approvals__revoke {
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+}
+
+.teacher-approvals__revoke:hover {
+  border-color: var(--border-focus);
+  color: var(--text);
+}

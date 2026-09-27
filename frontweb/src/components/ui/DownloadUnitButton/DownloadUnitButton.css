@@ -1,0 +1,24 @@
+.download-unit {
+  padding: 0.35rem 0.85rem;
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.download-unit:hover:not(:disabled) {
+  color: var(--text);
+  border-color: var(--border-focus);
+}
+
+.download-unit--done {
+  color: var(--success);
+  border-color: color-mix(in srgb, var(--success) 30%, transparent);
+  cursor: default;
+}

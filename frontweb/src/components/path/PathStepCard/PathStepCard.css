@@ -1,0 +1,137 @@
+.path-step {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding: 0 0 2rem;
+  animation: card-enter 0.6s var(--ease-out) both;
+}
+
+.path-step::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  inset-inline-start: 15px;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.path-step:last-child {
+  padding-bottom: 0;
+}
+
+.path-step:last-child::before {
+  display: none;
+}
+
+.path-step__marker {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+}
+
+.path-step--current .path-step__marker {
+  color: var(--bg-deep);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.path-step--done .path-step__marker {
+  color: var(--accent);
+  border-color: var(--border-focus);
+}
+
+.path-step__body {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.path-step--current .path-step__body {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 1px var(--accent-soft);
+}
+
+.path-step--upcoming .path-step__body {
+  opacity: 0.7;
+}
+
+.path-step__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.path-step__title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.path-step__title:hover {
+  color: var(--text-strong);
+}
+
+.path-step__subject {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.path-step__count {
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.path-step__due {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.path-step__lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.path-step__lesson {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.path-step__lesson:hover {
+  color: var(--text);
+}
+
+.path-step__lesson--done {
+  color: var(--text-dim);
+  text-decoration: line-through;
+  text-decoration-color: var(--border-focus);
+}
+
+.path-step__lesson--next {
+  color: var(--accent);
+}

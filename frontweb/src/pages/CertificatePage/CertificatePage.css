@@ -1,0 +1,108 @@
+.certificate-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem 5rem;
+  min-height: 60vh;
+}
+
+.certificate-page__sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: min(720px, 100%);
+  padding: 4rem 3rem;
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-focus);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 0 6px var(--bg-deep), 0 0 0 7px var(--border-subtle);
+  animation: card-enter 0.6s var(--ease-out) both;
+}
+
+.certificate-page__brand {
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.certificate-page__heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.certificate-page__name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.certificate-page__statement {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.certificate-page__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+.certificate-page__serial {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.certificate-page__print {
+  padding: 0.6rem 1.5rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--bg-deep);
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.certificate-page__invalid {
+  margin-top: 3rem;
+  color: var(--text-muted);
+}
+
+@media print {
+  .site-header,
+  .site-footer {
+    display: none !important;
+  }
+
+  .certificate-page__print {
+    display: none;
+  }
+
+  .certificate-page {
+    padding: 0;
+  }
+
+  .certificate-page__sheet {
+    box-shadow: none;
+    border: 2px solid #000;
+    background: #fff;
+  }
+
+  .certificate-page__sheet * {
+    color: #000 !important;
+  }
+}

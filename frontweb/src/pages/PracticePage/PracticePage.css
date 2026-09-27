@@ -1,0 +1,89 @@
+.practice-page {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: page-enter 0.6s var(--ease-out) both;
+}
+
+.practice-page__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.practice-page__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.practice-page__count {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+}
+
+.practice-page__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 2rem;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.practice-page__empty p {
+  margin: 0;
+}
+
+.practice-page__learn-link {
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.practice-page__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: card-enter 0.5s var(--ease-out) both;
+}
+
+.practice-page__source {
+  font-size: 0.8125rem;
+  text-decoration: none;
+  color: var(--text-dim);
+  transition: color var(--transition-fast);
+}
+
+.practice-page__source:hover {
+  color: var(--text);
+}
+
+.practice-page__next {
+  align-self: flex-end;
+  padding: 0.5rem 1.25rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.practice-page__next:hover {
+  color: var(--text);
+  border-color: var(--border-focus);
+}

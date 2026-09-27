@@ -1,0 +1,93 @@
+.planet-mark-wrap {
+  position: relative;
+  width: min(72vw, 280px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.planet-mark {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.planet-mark__orbit {
+  fill: none;
+  stroke: url(#orbit-stroke);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  filter: url(#orbit-blur);
+  opacity: 0.95;
+}
+
+.planet-mark__orbit-glow {
+  fill: none;
+  stroke: url(#orbit-stroke);
+  stroke-width: 5;
+  stroke-linecap: round;
+  filter: url(#orbit-soft-blur);
+  opacity: 0.35;
+}
+
+.planet-mark__sphere {
+  filter: url(#planet-depth);
+}
+
+.planet-mark__halo {
+  fill: url(#halo-gradient);
+  opacity: 0.5;
+  animation: halo-pulse 6s ease-in-out infinite;
+}
+
+.planet-mark__anamorphic {
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  animation: specular-shimmer 5s ease-in-out infinite;
+}
+
+.planet-mark__specular-bloom {
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  animation: specular-shimmer 5s ease-in-out infinite;
+}
+
+.planet-mark__specular-core {
+  filter: drop-shadow(0 0 4px var(--orbit-glow))
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.55));
+  animation: specular-core-pulse 5s ease-in-out infinite;
+}
+
+@keyframes halo-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+    transform-origin: center;
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.03);
+    transform-origin: center;
+  }
+}
+
+@keyframes specular-shimmer {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes specular-core-pulse {
+  0%,
+  100% {
+    opacity: 0.88;
+  }
+  50% {
+    opacity: 1;
+  }
+}

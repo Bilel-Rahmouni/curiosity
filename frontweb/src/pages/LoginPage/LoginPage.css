@@ -1,0 +1,119 @@
+.login-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.login-page__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 360px;
+  padding: 2rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  animation: card-enter 0.7s var(--ease-out) both;
+}
+
+.login-page__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.login-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.login-page__field input {
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--bg-mid);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.login-page__field input:focus {
+  border-color: var(--border-focus);
+}
+
+.login-page__error {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--danger);
+}
+
+.login-page__notice {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.login-page__submit,
+.login-page__google {
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.login-page__submit {
+  color: var(--bg-deep);
+  background: var(--text);
+  border: 1px solid var(--text);
+}
+
+.login-page__submit:hover {
+  background: var(--text-strong);
+}
+
+.login-page__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.login-page__google {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+}
+
+.login-page__google:hover {
+  border-color: var(--border-focus);
+  background: var(--bg-surface-hover);
+}
+
+.login-page__toggle {
+  align-self: center;
+  padding: 0.25rem;
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.login-page__toggle:hover {
+  color: var(--text);
+}

@@ -1,0 +1,86 @@
+.speak-exercise {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.speak-exercise__phrase-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.speak-exercise__phrase {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.speak-exercise__translation {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+}
+
+.speak-exercise__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.speak-exercise__controls button {
+  padding: 0.5rem 1.1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.speak-exercise__controls button:hover {
+  border-color: var(--border-focus);
+  transform: translateY(-1px);
+}
+
+.speak-exercise__mic--on {
+  border-color: var(--accent) !important;
+  animation: speak-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes speak-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--accent-soft);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+.speak-exercise__result {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.speak-exercise__result--correct {
+  color: var(--accent);
+}
+
+.speak-exercise__result--retry {
+  color: var(--text-muted);
+}
+
+.speak-exercise__heard {
+  color: var(--text-dim);
+}

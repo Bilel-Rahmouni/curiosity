@@ -1,0 +1,14 @@
+.subject-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius-md);
+}
+
+.subject-icon svg {
+  width: 22px;
+  height: 22px;
+}

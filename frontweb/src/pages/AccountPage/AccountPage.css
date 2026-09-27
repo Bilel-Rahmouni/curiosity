@@ -1,0 +1,211 @@
+.account-page {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  animation: page-enter 0.6s var(--ease-out) both;
+}
+
+.account-page__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.account-page__name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.account-page__role {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+}
+
+.account-page__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.account-page__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.account-page__stat-value {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.account-page__stat-value--code {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.account-page__stat-label {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+.account-page__links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.account-page__link {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.account-page__link:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--border-focus);
+}
+
+.account-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.account-page__section-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.account-page__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.account-page__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.account-page__assignment {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.account-page__assignment:hover {
+  text-decoration: underline;
+}
+
+.account-page__due {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+.account-page__join {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.account-page__join input {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--bg-mid);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.account-page__join input:focus {
+  border-color: var(--border-focus);
+}
+
+.account-page__join button {
+  padding: 0.55rem 1.1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bg-deep);
+  background: var(--text);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.account-page__error {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--danger);
+}
+
+.account-page__optout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.account-page__optout input {
+  accent-color: var(--accent);
+}
+
+.account-page__signout {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.account-page__signout:hover {
+  color: var(--text);
+  border-color: var(--border-focus);
+}

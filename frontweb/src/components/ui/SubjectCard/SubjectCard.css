@@ -1,0 +1,54 @@
+.subject-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+  animation: card-enter 0.7s var(--ease-out) both;
+}
+
+.subject-card:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--border-focus);
+}
+
+.subject-card:hover .subject-icon {
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+.subject-card .subject-icon {
+  margin-bottom: 0.25rem;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.subject-card__name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.subject-card__meta {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
